@@ -1,0 +1,496 @@
+@import url("reset.css");
+/* Header */
+.masthead{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.masthead .container > div{  
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 50px;
+}
+.masthead .logo-block .logo-design{
+    display: inline-block;
+    font-family: "Pacifico", cursive;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    margin: 0 10px 0 5px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+}
+.masthead .logo-block .name-design{
+    font-family: "Tangerine", cursive;
+    font-size: 36px;
+    color: #fff;
+    text-transform: capitalize;
+}
+.masthead .logo-block span.name-design::after{
+    content: ".";
+    color: var(--secondary-color);
+}
+.masthead nav li a{
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-bottom: 2px solid transparent;
+}
+.masthead .login{
+    font-family: inherit;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.masthead nav li a:hover{
+    color: var(--secondary-color);
+    transform: scale(1.02);
+    border-bottom: 2px solid var(--secondary-color);
+}
+.masthead .login:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.masthead nav li a:active,
+.masthead .login:active{
+    transform: scale(0.98);
+    transition: 0.3s;
+}
+
+
+/* about us section */
+.about-banner-section{
+    position: relative;
+}
+.about-banner-section img{
+    height: 650px;
+    filter: blur(2px);
+}
+.about-banner-section .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 17, 45, 0.5); /* blackish overlay */
+    z-index: 1;
+}
+.about-banner-section h1{
+    position: absolute;
+    z-index: 2;
+    text-transform: capitalize;
+    font-family: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    font-weight: 600;
+    color: #fff;
+    font-size: clamp(2.25rem, 2.0204rem + 1.2245vw, 3rem);    
+}
+
+/* about-about-section */
+.about-about-section{
+    background-color: #fff;
+    padding: 50px 0 0 0;
+}
+.about-about-section .about-text{
+    background-color: #264469;
+    color: #fff;
+    padding: 20px 30px 30px 30px;
+    border-radius: 20px;
+}
+.about-about-section .about-text h3,
+.about-about-section .about-text h4,
+.about-about-section .about-text h5{
+    text-transform: capitalize;
+}
+.about-about-section .about-text h3{
+    font-family: inherit;
+    border-left: 5px solid var(--secondary-color);
+    padding: 0 0 0 10px;
+    font-size: clamp(1rem, 0.8929rem + 0.5714vw, 1.25rem);
+    color: #fff;
+}
+.about-about-section .about-text h4{
+    font-family: inherit;
+    font-size: clamp(2.25rem, 2.1352rem + 0.6122vw, 2.625rem);
+    margin: 10px 0 20px 0;
+}
+.about-about-section .about-text p{
+    font-family: inherit;
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    color: #fff;
+    margin-bottom: 10px;
+}
+.about-about-section .about-text:hover{
+    transform: translateY(-2%);
+    transition: 0.2s;
+}
+.about-about-section .about-image img{
+    border-radius: 0 50px;
+}
+.about-about-section .impact-div{
+    padding: 100px 0;
+}
+.about-about-section .impact-div .impact-cards{
+    text-align: center;
+}
+.about-about-section .impact-div .impact-cards h5{
+    font-size: clamp(1rem, 0.4643rem + 2.8571vw, 2.25rem);
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.about-about-section .impact-div .impact-cards p{
+    /* color: rgba(0, 0, 0, 0.5); */
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+
+
+/* why choose us section */
+/* .why-choose-us-section{
+    padding: 50px 0;
+    background-color: var(--primary-color);
+}
+.why-choose-us-section .why-heading{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.why-choose-us-section .why-heading h2{
+    text-transform: capitalize;
+    font-size: clamp(2.25rem, 2.1352rem + 0.6122vw, 2.625rem);
+}
+.why-choose-us-section .why-heading p{
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    color: #B5B5B5;
+}
+.why-choose-us-section .why-cards-div .why-cards{
+    background-color: #2e3a4a;
+    padding: 30px 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+.why-choose-us-section .why-cards-div .why-cards span{
+    background-color: var(--secondary-color);
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: inline-block;
+}
+.why-choose-us-section .why-cards-div .why-cards h3{
+    font-size: clamp(1.375rem, 1.2985rem + 0.4082vw, 1.625rem);
+    color: #fff;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+.why-choose-us-section .why-cards-div .why-cards p{
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    color: #B5B5B5;
+    margin-bottom: 20px;
+} */
+
+
+/* how-it-works-section */
+.how-it-works-section{
+    padding: 50px 0;
+    background-color: var(--secondary-color);
+}
+.how-it-works-section .how-steps-block .how-heading h2{
+    font-family: inherit;
+    text-transform: capitalize;
+    border-left: 5px solid #fff;
+    padding: 0 0 0 10px;
+    font-size: clamp(1rem, 0.8929rem + 0.5714vw, 1.25rem);
+    color: #fff;
+}
+.how-it-works-section .how-steps-block .how-heading h3{
+    text-transform: capitalize;
+    font-size: clamp(2.25rem, 2.1352rem + 0.6122vw, 2.625rem);
+    color: #fff;
+}
+.how-it-works-section .how-steps-block .how-heading p{
+    text-transform: capitalize;
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    color: #fff;
+    margin-bottom: 20px;
+}
+.how-it-works-section .how-image-block img{
+    border-radius: 50px 0;
+}
+.how-it-works-section .how-steps-block .how-steps{
+    margin-top: 50px;
+}
+.how-it-works-section .how-steps-block .how-steps span{
+    width: 70px;
+    aspect-ratio: 1;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    outline: 4px solid #fff;
+}
+.how-it-works-section .how-steps-block .how-steps span h4{
+    font-family: inherit;
+    color: #fff;
+    font-size: clamp(2.25rem, 2.1352rem + 0.6122vw, 2.625rem);
+
+}
+.how-it-works-section .how-steps-block .how-steps h3{
+    font-family: inherit;
+    font-size: clamp(1.375rem, 1.2985rem + 0.4082vw, 1.625rem);
+    text-transform: capitalize;
+    color: #fff;
+}
+.how-it-works-section .how-steps-block .how-steps p{
+    font-family: inherit;
+    text-transform: capitalize;
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    color: #fff;
+    /* margin-bottom: 20px; */
+}
+
+/* meet our team section */
+.meet-our-team-section{
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+.meet-our-team-section .meet-our-team-heading h2{
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: clamp(2.25rem, 2.1352rem + 0.6122vw, 2.625rem);
+    text-transform: capitalize;
+    text-align: center;
+}
+.meet-our-team-section .meet-our-team-heading h2 span{
+    font-family: inherit;
+    color: var(--secondary-color);
+    font-style: italic;
+    font-weight: 400;
+}
+.meet-our-team-section .meet-our-team-heading p{
+    font-family: inherit;
+    font-weight: 500;
+    color: rgba(53, 56, 65, 0.8);
+    font-size: clamp(1.5rem, 1.3852rem + 0.6122vw, 1.875rem);    
+    margin: 10px 0 15px 0;
+    text-transform: capitalize;
+    text-align: center;
+}
+.meet-our-team-section .team-members-div{
+    margin: 50px 0;
+}
+.meet-our-team-section .team-members-div .mid-team-member img{
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.meet-our-team-section .team-members-div .second-team-member img{
+    width: 160px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.meet-our-team-section .team-members-div .third-team-member img{
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.meet-our-team-section .team-members-div .mid-team-member h3{
+    font-family: "Luxurious Script", cursive;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+    font-size: 36px;
+}
+.meet-our-team-section .team-members-div .mid-team-member p{
+    text-align: center;
+    text-transform: capitalize;
+    color: #B5B5B5;
+    font-size: 16px;
+}
+.meet-our-team-section .team-members-div .second-team-member h3{
+    font-family: "Luxurious Script", cursive;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+    font-size: 32px;
+}
+.meet-our-team-section .team-members-div .second-team-member p{
+    text-align: center;
+    text-transform: capitalize;
+    color: #B5B5B5;
+    font-size: 14px;
+}
+.meet-our-team-section .team-members-div .third-team-member h3{
+    font-family: "Luxurious Script", cursive;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+    font-size: 28px;
+}
+.meet-our-team-section .team-members-div .third-team-member p{
+    text-align: center;
+    text-transform: capitalize;
+    color: #B5B5B5;
+    font-size: 12px;
+}
+/* testimonials section */
+
+.testimonials{
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+}
+.testimonials h2{
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: clamp(2.25rem, 2.1352rem + 0.6122vw, 2.625rem);
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.testimonials h2 span{
+    font-family: inherit;
+    color: var(--secondary-color);
+    font-style: italic;
+    font-weight: 400;
+}
+.testimonials .testimonial-slider {
+     margin: 30px 0 0 0;
+}
+.testimonials .reviews {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    outline: none;
+}
+.testimonials .reviews:hover {
+    transform: translateY(-5px);
+}
+.testimonials .reviews span {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #f1c40f;
+}
+.testimonials .reviews span i {
+    margin-right: 2px;
+}
+.testimonials .reviews p{
+    font-family: inherit;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    font-style: italic;
+    color: rgba(53, 56, 65, 0.6);
+    margin: 10px 0 15px 0;
+}
+.testimonials .reviews h4{
+    font-family: inherit;
+    font-weight: 500;
+    color: rgba(53, 56, 65, 0.8);
+    font-size: clamp(1rem, 0.9617rem + 0.2041vw, 1.125rem);
+    text-transform: capitalize;
+}
+.testimonials .testimonial-slider .slick-slide {
+    padding: 20px 10px;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+.testimonials .testimonial-slider .slick-center {
+    opacity: 1;
+    transform: scale(1.001);
+}
+
+/* Footer section */
+.tripmate-footer{
+    background-color: var(--primary-color);
+    padding: 50px 0;
+}
+.tripmate-footer .footer-brand h2 {
+    font-family: "Tangerine", cursive;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+}
+.tripmate-footer h4{
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-size: clamp(1.125rem, 1.0867rem + 0.2041vw, 1.25rem);
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.tripmate-footer .footer-brand p{
+    font-family: inherit;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    margin: 10px 0 15px 0;
+}
+.tripmate-footer .footer-contact p a,
+.tripmate-footer .footer-contact p span{
+    font-family: inherit;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);    
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+.tripmate-footer .footer-links ul,
+.tripmate-footer .footer-social a{
+    padding: 0 0 0 50%;
+    transform: translateX(-25%);
+}
+.tripmate-footer .footer-links a,
+.tripmate-footer .footer-contact p,
+.tripmate-footer .footer-social a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+.tripmate-footer .footer-links a,
+.tripmate-footer .footer-contact a{
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.tripmate-footer .footer-links a:hover,
+.tripmate-footer .footer-contact p a:hover{
+    color: var(--secondary-color);
+}
+.tripmate-footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--secondary-color);
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    color: #9ca3af;
+}
+

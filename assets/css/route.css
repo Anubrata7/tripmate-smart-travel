@@ -1,0 +1,376 @@
+@import url("reset.css");
+/* Header */
+.masthead .container > div{  
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 50px;
+}
+.masthead .logo-block .logo-design{
+    display: inline-block;
+    font-family: "Pacifico", cursive;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    margin: 0 10px 0 5px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+}
+.masthead .logo-block .name-design{
+    font-family: "Tangerine", cursive;
+    font-size: 36px;
+    color: #fff;
+    text-transform: capitalize;
+}
+.masthead .logo-block span.name-design::after{
+    content: ".";
+    color: var(--secondary-color);
+}
+.masthead nav li a{
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-bottom: 2px solid transparent;
+}
+.masthead .login{
+    font-family: inherit;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.masthead nav li a:hover{
+    color: var(--secondary-color);
+    transform: scale(1.02);
+    border-bottom: 2px solid var(--secondary-color);
+}
+.masthead .login:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.masthead nav li a:active,
+.masthead .login:active{
+    transform: scale(0.98);
+    transition: 0.3s;
+}
+
+/* map section */
+.map-section h1{
+    font-family: inherit;
+    font-weight: 600;
+    font-size: clamp(2.25rem, 2.0204rem + 1.2245vw, 3rem);    
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+.map-section h2{
+    font-family: inherit;
+    font-weight: 500;
+    color: rgba(53, 56, 65, 0.8);
+    font-size: clamp(1.5rem, 1.3852rem + 0.6122vw, 1.875rem);    
+    margin: 10px 0;
+    text-transform: capitalize;
+    text-align: center;
+}
+.map-section h1 span{
+    font-family: inherit;
+    color: var(--secondary-color);
+    font-style: italic;
+    font-weight: 400;
+}
+#map {
+    /* height: 500px; */
+    height: 85vh;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+    border: none;
+    outline: 3px solid var(--primary-color);
+}
+#result {
+    margin-top: 15px;
+    font-size: 1.1em;
+    white-space: pre-line;
+    font-weight: bold;
+}
+
+.weather-details{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#weather-info{
+    flex-wrap: wrap;
+    max-height: 300px;
+    overflow-y: auto;
+    justify-content: center;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: var(--secondary-color) transparent;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 20px ;
+    border-radius: 10px;
+}
+#weather-info::-webkit-scrollbar {
+    width: 6px;
+}
+#weather-info::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+}
+#weather-info::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#weather-info > div{
+    padding: 20px 25px;
+    /* flex: 1; */
+    width: 320px;
+    height: 250px;
+    /* min-height: fit-content; */
+    color: #fff;
+    border-radius: 10px;
+    display: grid;
+    place-content: center;
+}
+#weather-info > div:nth-child(odd){
+    background-color: var(--primary-color);
+}
+#weather-info > div:nth-child(even){
+    background-color: var(--secondary-color);
+}
+
+#weather-info > div:hover{
+    transform: translateY(-2px);
+}
+
+#weather-info > div p.stopnum{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#weather-info > div p{
+    margin: 5px 0;
+    font-size: 15px;
+}
+#weather-info > div p span{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* feed back section */
+.feedback-section{
+    background-color: #fff;
+    padding: 20px 0 50px 0;
+}
+.feedback-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.close-btn {
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    display: none;
+}
+.close-btn:hover {
+    color: #333;
+}
+.feedback-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--secondary-color);
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.feedback-btn.active {
+    border-color: var(--primary-color);
+    color: #fff;
+    background: var(--secondary-color);
+}
+.issue-container {
+    display: none;
+    margin: 10px 0;
+}
+.issue-container select, .issue-container textarea, .others-input {
+    border: 1px solid var(--primary-color);
+    font-family: inherit;
+    width: 100%;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 15px;
+    caret-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.issue-container select{
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.issue-container label{
+    margin: 10px 0;
+}
+.issue-container select:focus, .issue-container textarea:focus, .others-input:focus {
+    border: none;
+    outline: 1px solid var(--secondary-color);
+}
+#othersOptionText input{
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+#othersOptionText input:focus{
+    outline: none;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.issue-container textarea{
+    border-radius: 10px;
+    height: 100px;
+    resize: none;
+    margin-top: 10px;
+}
+  
+.star {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+.star.selected {
+  color: gold;
+}
+
+/* Footer section */
+.tripmate-footer{
+    background-color: var(--primary-color);
+    padding: 50px 0;
+}
+.tripmate-footer .footer-brand h2 {
+    font-family: "Tangerine", cursive;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+}
+.tripmate-footer h4{
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-size: clamp(1.125rem, 1.0867rem + 0.2041vw, 1.25rem);
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.tripmate-footer .footer-brand p{
+    font-family: inherit;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    margin: 10px 0 15px 0;
+}
+.tripmate-footer .footer-contact p a,
+.tripmate-footer .footer-contact p span{
+    font-family: inherit;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);    
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+.tripmate-footer .footer-links ul,
+.tripmate-footer .footer-social a{
+    padding: 0 0 0 50%;
+    transform: translateX(-25%);
+}
+.tripmate-footer .footer-links a,
+.tripmate-footer .footer-contact p,
+.tripmate-footer .footer-social a{
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+.tripmate-footer .footer-links a,
+.tripmate-footer .footer-contact a{
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.tripmate-footer .footer-links a:hover,
+.tripmate-footer .footer-contact p a:hover{
+  color: var(--secondary-color);
+}
+.tripmate-footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--secondary-color);
+    font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
+    color: #9ca3af;
+}
+
+
+
+
+
+.travel-score-bar-container {
+  width: 800px;
+  height: 25px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* .travel-score-bar {
+  height: 100%;
+  width: 0;
+  transition: width 0.5s ease;
+} */
+.travel-score-bar {
+  height: 25px; /* set a visible fixed height */
+  width: 0;
+  background-color: rgba(0, 255, 0, 0.5); /* initial color */
+  transition: width 0.5s ease;
+  border-radius: 20px 0 0 20px; /* optional for round edges */
+}
+#travel-score-bar {
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.travel-score-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+.travel-score-text p{
+    color: var(--secondary-color);
+}
+.travel-score-text p span{
+    color: var(--primary-color);
+}
+
+
+#result p{
+    color: var(--secondary-color);
+    font-style: italic;
+    margin: 5px 40px;
+}
+#result p span{
+    color: var(--primary-color);
+    font-style: normal;
+}
