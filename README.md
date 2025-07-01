@@ -1,1 +1,1 @@
-# tripmate-smart-travel
+# TripMate.io

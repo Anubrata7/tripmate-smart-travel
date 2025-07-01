@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- boxicons css cdn -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- slick slider css cdn -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/plan.css">
+    <!-- custom responsive css -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- jQuery cdn --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- slick slider cdn -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    <!-- slick slider js -->
+    <!-- slick banner slider js -->
+    <script src="./assets/js/banner-slick.js" defer></script>
+    <!-- slick popular-routes slider js -->
+    <script src="./assets/js/popular-routes.js" defer></script>
+    <!-- slick testimonial slider js -->
+    <script src="./assets/js/testimonial-slider.js" defer></script>
+    <!-- custom js -->
+    <script src="./assets/js/planning.js" defer></script>
+    <!-- custom hotel json -->
+    <script src="./assets/js/hotels.js"></script>
+</head>
+<body>
+    <!-- header section -->
+    <header class="masthead">
+        <div class="container">
+            <div class="d-flex justify-content-space-between align-items-center">
+                <div class="logo-block" title="TripMate">
+                    <span class="logo-design">T</span><span class="name-design">TripMate</span>
+                </div>
+                <nav>
+                    <ul class="d-flex align-items-center gap-30">
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./plan.html">plan</a></li>
+                        <li><a href="./about-us.html">about</a></li>
+                        <li><a href="./index.html#faq-section-id">FAQs</a></li>
+                    </ul>
+                </nav>
+                <a href="./contact.html" class="login">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="plan-banner-section">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-space-between">
+                <div class="text-block">
+                    <h1 class="heading">Plan with <span>TripMate</span></h1>
+                    <h2>Smart Trips Begin with Smart Plans</h2>
+                    <p>Plan with confidence using TripMate's intelligent route-based stoppages, daily weather insights, and handpicked hotel recommendations. <br>Designed to make your journey smoother and more enjoyable.</p>
+                    <a href="./about-us.html" class="btn">Learn more &rarr;</a>  
+                </div>
+                <img src="./assets/images/travel-concept-with-baggage.jpg" alt="Slide 1" class="img-fluid"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- planning section -->
+    <section class="planning-section" id="planning-section">
+        <div class="container">
+            <h2>Plan Your Route? <span>Just a Few Clicks.</span></h2>
+            <div class="d-grid gap-40 col-2 align-items-center">
+                <div>
+                    <img src="./assets/images/4056364.jpg" alt="" class="img-fit">
+                </div>
+                <div>
+                    <!-- <form class="" style="margin: 20px 0;"> -->
+                        <div class="d-grid col-2 gap-40 align-items-center">
+                            <div class="trip-planning__form-group start-point location-group">
+                                <label for="startpoint" class="d-flex align-items-center gap-10"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" ><path d="m6,8.44c-.02,5.1,5.17,9.18,5.39,9.35.18.14.4.21.61.21s.43-.07.61-.21c.22-.17,5.41-4.25,5.39-9.35,0-3.55-2.69-6.44-6-6.44s-6,2.89-6,6.44Zm10,0h0c.01,3.19-2.74,6.08-4,7.24-1.26-1.15-4.01-4.04-4-7.24,0-2.45,1.79-4.44,4-4.44s4,1.99,4,4.44Z"></path><path d="M12 6A2 2 0 1 0 12 10 2 2 0 1 0 12 6z"></path><path d="m18.02,14.73c-.4.64-.84,1.23-1.27,1.76,2.13.48,3.25,1.19,3.25,1.51,0,.51-2.75,2-8,2s-8-1.49-8-2c0-.32,1.12-1.03,3.25-1.51-.43-.53-.86-1.12-1.27-1.76-2.32.64-3.98,1.71-3.98,3.27,0,2.75,5.18,4,10,4s10-1.25,10-4c0-1.56-1.67-2.63-3.98-3.27Z"></path></svg>Start point</label>
+                                <input type="text" id="source" name="startpoint" placeholder="Enter your start point" required>
+                                <button type="button" class="location-button" onclick="getLocation()"><svg  xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" ><path d="m11,9.86v6.14l1,2,1-2v-6.14c1.72-.45,3-2,3-3.86,0-2.21-1.79-4-4-4s-4,1.79-4,4c0,1.86,1.28,3.41,3,3.86Zm1-5.86c1.1,0,2,.9,2,2s-.9,2-2,2-2-.9-2-2,.9-2,2-2Z"></path><path d="m15,14.17v2.01c3.29.41,5,1.41,5,1.82,0,.51-2.75,2-8,2s-8-1.49-8-2c0-.4,1.71-1.41,5-1.82v-2.01c-3.75.42-7,1.66-7,3.83,0,2.75,5.18,4,10,4s10-1.25,10-4c0-2.18-3.25-3.41-7-3.83Z"></path></svg></button>
+                            </div>
+                            <div class="trip-planning__form-group ending-point">
+                                <label for="endpoint" class="d-flex align-items-center gap-10"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" ><path d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2"></path><path d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6"></path></svg>Destination</label>
+                                <input type="text" id="destination" name="endpoint" placeholder="Enter your destination" required>
+                            </div>
+                        </div>
+                        <div class="d-grid col-1-2">
+                            <div class="trip-planning__form-group starting-date">
+                                <label for="start-date" class="d-flex align-items-center gap-10"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" ><path d="M7 11H17V13H7z"></path><path d="M7 15H14V17H7z"></path><path d="m19,4h-2v-2h-2v2h-6v-2h-2v2h-2c-1.1,0-2,.9-2,2v14c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2V6c0-1.1-.9-2-2-2ZM5,20v-12h14v-2,14s-14,0-14,0Z"></path></svg>Date</label>
+                                <input type="date" id="start-date" name="start-date" required>
+                            </div>
+                            <fieldset class="trip-planning__form-group budget">
+                                <legend class="d-flex align-items-center gap-10"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" ><path d="M11 6h2v2h-2zM15 6h2v2h-2zM15 10.03h2V12h-2zM15 14h2v2h-2zM7 15h2v2H7z"></path><path d="M3 16v5c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v5.59L2.29 14.3c-.29.29-.37.72-.22 1.09s.52.62.92.62Zm8 4H5v-5.59l3-3 3 3zm8-16v16h-6v-4a1.002 1.002 0 0 0 .7-1.71L8.99 9.58V3.99h10Z"></path></svg>Hotel</legend>
+                                <div>
+                                    <label><input type="radio" name="budget" value="2000" id="budget-economical" required> Economical</label>
+                                    <label><input type="radio" name="budget" value="5000" id="budget-standard"> Standard</label>
+                                    <label style="margin-right: 0;"><input type="radio" name="budget" value="10000" id="budget-premium"> Premium</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="d-grid col-2">
+                            <fieldset class="trip-planning__form-group mode-of-transport">
+                                <legend class="d-flex align-items-center gap-10"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" ><path d="M20.77 9.16 19.4 5.05A2.99 2.99 0 0 0 16.55 3H7.44a3 3 0 0 0-2.85 2.05L3.22 9.16c-.72.3-1.23 1.02-1.23 1.84v5c0 .75.42 1.4 1.04 1.74-.01.07-.04.13-.04.2V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h12v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.06c0-.07-.03-.13-.04-.2.62-.34 1.04-.99 1.04-1.74v-5c0-.83-.51-1.54-1.23-1.84ZM4 16v-5h16v5zM7.44 5h9.12a1 1 0 0 1 .95.68L18.62 9H5.39L6.5 5.68A1 1 0 0 1 7.45 5Z"></path><path d="M6.5 12a1.5 1.5 0 1 0 0 3 1.5 1.5 0 1 0 0-3M17.5 12a1.5 1.5 0 1 0 0 3 1.5 1.5 0 1 0 0-3"></path></svg>Choose Your Ride</legend>
+                                <div>
+                                    <label><input type="radio" name="transport" value="15" id="mode-car" required> Car </label>
+                                    <label><input type="radio" name="transport" value="30" id="mode-bike"> Bike </label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="trip-planning__form-group time">
+                                <legend class="d-flex align-items-center gap-10"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" ><path d="m19.07,4.93c-.92-.92-1.99-1.64-3.18-2.14-1.23-.52-2.54-.79-3.89-.79-.55,0-1,.45-1,1v5h2v-3.94c.73.09,1.44.28,2.11.57.95.4,1.81.98,2.54,1.72.74.73,1.31,1.59,1.71,2.54.42.99.63,2.03.63,3.11s-.21,2.13-.63,3.11c-.4.95-.98,1.81-1.72,2.54-.73.74-1.59,1.31-2.54,1.71-1.97.83-4.26.83-6.23,0-.95-.4-1.81-.98-2.54-1.72-.74-.73-1.31-1.59-1.71-2.54-.42-.99-.63-2.03-.63-3.11s.21-2.13.63-3.11c.4-.95.98-1.81,1.72-2.54l-1.41-1.42c-.92.92-1.64,1.99-2.14,3.18-.52,1.23-.79,2.54-.79,3.89s.26,2.66.79,3.89c.5,1.19,1.23,2.26,2.14,3.18s1.99,1.64,3.18,2.14c1.23.52,2.54.79,3.89.79s2.66-.26,3.89-.79c1.19-.5,2.26-1.23,3.18-2.14s1.64-1.99,2.14-3.18c.52-1.23.79-2.54.79-3.89s-.26-2.66-.79-3.89c-.5-1.19-1.23-2.26-2.14-3.18Z"></path><path d="m12.88,11.12l-4.88-3.12,3.12,4.88c1.22,1.68,3.45-.55,1.77-1.77Z"></path></svg>Time</legend>
+                                <div>
+                                    <label><input type="radio" name="time" value="450" id="time-express" required> Express </label>
+                                    <label><input type="radio" name="time" value="350" id="time-standard"> Standard </label>
+                                    <label style="margin-right: 0;"><input type="radio" name="time" value="250" id="time-relax"> Relax </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <button type="submit" class="btn" id="route-optimize">Let’s Go !</button>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section class="vacation-section">
+        <div class="container">             
+            <div class="d-grid place-content-center" style="text-align: center;">
+                <h2>Where to Stay? <span>Right This Way.</span></h2>
+                <p>Over 5000 Hotels to Choose From for Every Journey</p>
+                <div class="search-container d-flex align-items-center" style="margin-inline: auto;">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Search Hotels" id="searchInput">
+                    <button onclick="searchDestination()"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="d-grid col-4 gap-20">
+                <div class="vacation-card">
+                    <img src="./assets/images/hotel-1.jpeg" class="img-fit" alt="Amazon">
+                </div>
+                <div class="vacation-card">
+                    <img src="./assets/images/hotel-2.jpeg" class="img-fit" alt="Amazon">
+                </div>
+                <div class="vacation-card">
+                    <img src="./assets/images/hotel-3.jpeg" class="img-fit" alt="Amazon">
+                </div>
+                <div class="vacation-card">
+                    <img src="./assets/images/hotel-4.jpeg" class="img-fit" alt="Hill View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="tripmate-footer">
+        <div class="container">
+            <div class="d-flex justify-content-space-between gap-10">
+                <div class="footer-brand">
+                    <h2>TripMate</h2>
+                    <p>Your intelligent travel assistant — Plan better, travel smarter.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./plan.html">Plan</a></li>
+                        <li><a href="./about-us.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:TripMate.io@gmail.com" style="text-transform: none;">TripMate.io@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+917908970852">+91 79089 70852</a></p>
+                    <p>Hours: <span>Mon-Fri, 9am - 6pm</span></p>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TripMate. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
