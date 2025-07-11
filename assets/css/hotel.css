@@ -199,6 +199,15 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+.more-link{
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
 #priceRange{
     width: 170px;
     margin-inline: 5px;
